@@ -1,0 +1,189 @@
+/*@font-face {
+    font-family: Be Vietnam;
+    src:url('/fuentes/BeVietnam-Regular.woff') format('woff');
+}
+*/
+*{
+    box-sizing: border-box;   
+}
+
+/*-----Configuracion inicial para movil---------*/
+
+/*--------BODY-------*/
+body {
+    font-family: 'Be Vietnam', 'Helvetica', 'Trebuchet MS';
+    margin: 0;
+    min-width: 480px;
+
+}
+/*-------HEADER--------*/
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 7vw;
+
+}
+
+/*---Se Oculta menú y botón (Get Started) en Movil---*/
+.nav-header {
+    display: none;
+}
+#button-header {
+    display: none;
+}
+
+/*--Botón menú móvil--*/
+.fa-solid {
+    background-color: white;
+    color: #232C50;
+    font-size: 3rem;
+}
+.fa-solid:hover {
+    color: #7b8096;
+}
+
+/*///-------TITULOS--------///*/
+/*Lo oculto para que el nombre de la emresa sea H1*/
+h1 {
+    display: none;
+}
+
+/*///---------MAIN---------///*/
+
+.tarjetas {
+    display: flex;
+    flex-direction: column;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    margin: 0%;
+    gap: 4rem;
+}
+
+/*---Gral Tarjeta 1 y 3---*/
+.tarjeta {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    row-gap: 2rem; 
+}
+
+/*---Titulos Tarjeta 1 y 3---*/
+.title-tarjeta-1 {
+    font-size: 3rem;
+    font-weight: bolder;
+    text-align: center;
+    padding: 0%;
+    margin: 0%;
+}
+
+.title-tarjeta-3 {
+    font-size: 2.25rem;
+    font-weight: bolder;
+    text-align: center;
+    margin: 0%;
+}
+
+/*Parrafos destacados (negrita)*/
+.parrafo-destacado {
+    border: 0;
+    font-size: 1rem;
+    font-weight: bolder;
+    text-align: center;
+    margin: 0%;
+    padding: 0%;
+}
+
+/*Tarjeta con Porcentajes*/
+.tarjeta-porcentajes {
+    display: flex;
+    justify-content: center;
+    order: -1;
+}
+.porcentajes {
+    max-width: 25rem;
+}
+
+/*Lista ordenada tarjeta 4*/
+
+.lista-tarjeta-4 {
+    background-color: #aeaccd;
+}
+/*--------------------------------------------------------------------*/
+ol {
+    /* Remove defaults */
+    
+    margin: 0;
+    padding: 0;
+    list-style: none;/*Acá saca los nùmeros originales de la lista   
+    /* Create counter */
+    counter-reset: list;
+  }
+  
+  li {
+    /* Use CSS grid for spacing between marker and list item contents */
+    display: flex;
+    flex-direction: column;
+    
+    /* Increment counter */
+    counter-increment: list;
+  }
+  
+  li::before {
+    /* Set content to an empty string */
+    content: counter(list);
+    
+    /* Add a background image for the marker */
+    background-color: #8B48BF ;
+    
+    /* Add animation */
+    /*animation: 3s linear 1s infinite spin;*/
+
+    /* Create the box and center its contents */
+    font-size: 1rem;
+    width: 4.3rem;
+    height: 2.6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50rem;
+    /* Additional text styles */
+    color: white;
+  }
+
+/*----------------------------------------------------------------*/
+/*/////////////////////////////////////
+ol li {
+    background: #cce5ff;
+    color: darkblue;
+    margin: 5px;
+  }
+
+
+**************************************/
+.button-general {
+    background-color: #8B48BF;
+    border-radius: 3rem;
+    border: 0;
+    color: white;
+    font-size: .8;
+    height: 3rem;
+    margin: 0%;
+    width: 8.4rem;
+    
+    
+  
+}
+
+
+.banner {
+    background-color: #8B48BF;
+    color: white;
+}
+/*--------Footer-------*/
+footer {
+    background-color: black;
+    color: white;
+}
+
+
