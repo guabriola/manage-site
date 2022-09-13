@@ -3,30 +3,39 @@
 }
 
 body {
-    
     display: flex;
-    flex-wrap: wrap;
-    
+    flex-wrap: wrap;  
 }
 
 header {
         background-color: beige;
         display: flex;
         justify-content: space-between;
-        padding: 7vw;
+}
+
+.nav-header {
+    display: none;
+}
+
+#button-header {
+    display: none;
+}
+
+h1 {
+    display: none;
+}
+div {
+    background-color: green;
 }
 
 main {
-    display: flex;
     background-color: aqua;
     width: 480px;
     height: auto;
 }
 
 footer {
-
-        background-color: black;
-        color: white;
-
+    background-color: black;
+    color: white;
 }
 
