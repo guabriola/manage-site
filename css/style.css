@@ -118,6 +118,7 @@ ol {
     list-style: none;/*Acá saca los nùmeros originales de la lista   
     /* Create counter */
     counter-reset: list;
+    display: inline-block;
   }
   
   li {
@@ -149,6 +150,7 @@ ol {
     border-radius: 50rem;
     /* Additional text styles */
     color: white;
+    
   }
 
 /*----------------------------------------------------------------*/
