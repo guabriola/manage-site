@@ -1,0 +1,32 @@
+*{
+    box-sizing: border-box;   
+}
+
+body {
+    
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
+header {
+        background-color: beige;
+        display: flex;
+        justify-content: space-between;
+        padding: 7vw;
+}
+
+main {
+    display: flex;
+    background-color: aqua;
+    width: 480px;
+    height: auto;
+}
+
+footer {
+
+        background-color: black;
+        color: white;
+
+}
+
