@@ -48,6 +48,11 @@ h1 {
     display: none;
 }
 
+li h4 {
+    display: flex;
+
+}
+
 /*///---------MAIN---------///*/
 
 .tarjetas {
@@ -104,35 +109,47 @@ h1 {
     max-width: 25rem;
 }
 
-/*Lista ordenada tarjeta 4*/
-
-.lista-tarjeta-4 {
-    background-color: #aeaccd;
-}
+/*//////////////Lista ordenada tarjeta 4//////////////////////////////*/
 /*--------------------------------------------------------------------*/
-ol {
+
+.tarjeta-lista-ord {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+
+}
+.lista-tarjeta-4 {
     /* Remove defaults */
-    
-    margin: 0;
-    padding: 0;
+    display: flex;
+    flex-direction: column;
     list-style: none;/*Acá saca los nùmeros originales de la lista   
     /* Create counter */
     counter-reset: list;
     display: inline-block;
   }
-  
-  li {
-    /* Use CSS grid for spacing between marker and list item contents */
+
+  .fondo-titulo {
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    background-color: rgba(139, 72, 191, 0.3);
+    height: 2.6rem;
+    flex-grow: 4;
     
+    
+  }
+
+.list-item {
+
     /* Increment counter */
+    display: flex;
+    flex-wrap: wrap;
     counter-increment: list;
+    align-items: baseline;
+    
   }
   
-  li::before {
+.list-item::before {
     /* Set content to an empty string */
-    content: counter(list);
+    content: counter(list, decimal-leading-zero);
     
     /* Add a background image for the marker */
     background-color: #8B48BF ;
@@ -150,11 +167,15 @@ ol {
     border-radius: 50rem;
     /* Additional text styles */
     color: white;
-    
+
+  }
+
+  .parrafo-lista {
+    padding: 1rem 1.5rem;
   }
 
 /*----------------------------------------------------------------*/
-/*/////////////////////////////////////
+/*///////////////////////////////////////////////////////////////////
 ol li {
     background: #cce5ff;
     color: darkblue;
