@@ -5,6 +5,7 @@
 */
 *{
     box-sizing: border-box;   
+
 }
 /*///////////////////////////////////////////////////////////////////*/
 /*-----Configuracion inicial para movil---------*/
@@ -17,6 +18,7 @@ body {
     flex-direction: column;
     justify-content: center;
     margin: 0;
+    min-width: 350px;
 }
 
 .contenedor {
@@ -25,6 +27,7 @@ body {
     justify-content: center;
     margin: 0%;
     gap: 4rem;
+    max-width: 1440px;
 }
 /*-------HEADER--------*/
 
@@ -134,18 +137,15 @@ h3 {
     max-width: 25rem;
 }
 
-/*//////////////Estilso Lista O - Prueba tarjeta 4//////////////////////////////*/
-/*--------------------------------------------------------------------*/
-/*///////////////////////////////////////////////////////////////////*/
 
+/*---------Lsitas con estilos cambio viñeta-----------*/
 
 .lista-tarjeta-4 {
-    /* Remove defaults */
+    /* Se quita estilos de default */
     display: flex;
     flex-direction: column;
-    list-style: none;/*Acá saca los nùmeros originales de la lista   
-    /* Create counter */
-    counter-reset: list;
+    list-style: none;/*Acá saca los nùmeros originales de la lista*/ 
+    counter-reset: list;/* Crea el contador que se saca en la linea anterior */
   }
 
   .fondo-titulo {
@@ -154,19 +154,18 @@ h3 {
     background-color: rgba(139, 72, 191, 0.3);
     height: 2.6rem;
     flex-grow: 4;  
+    padding-left: 2rem;
 }
 
 .list-item {
-    /* Increment counter */
     display: flex;
     flex-wrap: wrap;
-    counter-increment: list;
+    counter-increment: list; /* Increment counter */
     align-items: baseline;
 }
   
 .list-item::before {
-    /* Set content to an empty string */
-    content: counter(list, decimal-leading-zero);
+    content: counter(list, decimal-leading-zero);/**/
     
     /* Add a background image for the marker */
     background-color: #8B48BF ;
@@ -184,15 +183,16 @@ h3 {
     border-radius: 50rem;
     /* Additional text styles */
     color: white;;
+    margin-right: -1rem;
 
   }
 
   .parrafo-lista {
-    padding: 1rem 1.5rem;
+    padding: 1vh 5vw;
   }
-/*///////////////////////////////////////////////////////////////////*/
-/*----------------------------------------------------------------*/
-/*///////////////////////////////////////////////////////////////////*/
+
+/*----------------------------------*/
+
 
 /*---Avatares------*/
 
@@ -203,6 +203,13 @@ h3 {
     text-align: center;
     gap: 4rem;
     padding: 0 2rem;
+
+}
+
+.tarjetas-ocultar {
+    flex-direction: column;
+    display: none;/*al agrandar la página se cambia por "display: flex;"*/
+    gap: 4rem;
 }
 
 .avatar-card{
@@ -211,28 +218,28 @@ h3 {
     align-items: center;
 }
 
-.contenedor-texto-avatar > * {
+.contenedor-avatar > * {
     margin: 0%;
 }
 
-.contenedor-texto-avatar {
+.contenedor-avatar {
     display: flex;
     align-items: center;
     flex-direction: column;
     background-color: #FAFAFA; 
 }
 
-.contenedor-texto-avatar h4 {
+.contenedor-avatar h4 {
     color:#3F4868;
     padding: 1rem;
 }
 
-.contenedor-texto-avatar p {
+.contenedor-avatar p {
     color:#B9B9C1;
     padding: 1rem;
 }
 
-.contenedor-texto-avatar img {
+.contenedor-avatar img {
     width: 4rem;
     margin-top: -2rem;
  
