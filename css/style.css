@@ -27,6 +27,7 @@ body {
     gap: 4rem;
 }
 /*-------HEADER--------*/
+
 header {
     display: flex;
     justify-content: space-between;
@@ -137,10 +138,7 @@ h3 {
 /*--------------------------------------------------------------------*/
 /*///////////////////////////////////////////////////////////////////*/
 
-.tarjeta-lista-ord {
 
-
-}
 .lista-tarjeta-4 {
     /* Remove defaults */
     display: flex;
@@ -284,12 +282,11 @@ form .cuadro-texto {
 /*--------Nav con Lista-------*/
 ul.list-footer {
     list-style: none;
-    columns: 2;
+    columns: 2; /*Se hace que se divina en dos*/
+    column-gap: 7rem; /*Personalizo la distancia entre columnas*/
     margin: 0;
     padding: 0;
-    -webkit-columns: 2; /*Se hace que se divina en dos*/
-    -webkit-column-gap: 7rem; /*Personalizo la distancia entre columnas*/
-    
+
 }
 
 /*--------Iconos Logo y copyright-------*/
