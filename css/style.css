@@ -16,33 +16,24 @@ body {
     font-family: 'Be Vietnam', 'Helvetica', 'Trebuchet MS';
     display: flex;
     flex-direction: column;
-    justify-content: center;
     margin: 0;
     min-width: 350px;
-}
-
-.contenedor {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: 0%;
-    gap: 4rem;
-    max-width: 1440px;
+    gap: 4vh;
 }
 /*-------HEADER--------*/
 
 header {
     display: flex;
+    padding: 2rem;
     justify-content: space-between;
-    padding: 7vw;
-
+    max-width: 850px;   
 }
 
-/*---Se Oculta menú y botón (Get Started) en Movil---*/
-.nav-header {
+
+.nav-header { /*---Se Oculta menú y botón (Get Started) en Movil---*/
     display: none;
 }
-#button-header {
+header input.button-general {
     display: none;
 }
 
@@ -55,6 +46,12 @@ header {
 .fa-solid:hover {
     color: #7b8096;
 }
+/*-----------------------------------*/
+
+
+
+
+
 
 /*///-------TITULOS--------///*/
 /*Lo oculto para que el nombre de la emresa sea H1*/
@@ -82,6 +79,18 @@ li h4 {
 /*////////////////////////////////*/
 /*///---------MAIN---------///*/
 /*///////////////////////////////*/
+/*-------Main--------*/
+.contenedor-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    max-width: 850px;
+    margin: 0%;
+    gap: 4rem;
+}
+
+
 .tarjetas {
     display: flex;
     flex-direction: column;
@@ -246,6 +255,18 @@ h3 {
 }
 /*------------------------------------*/
 
+
+/*--------Footer-------*/
+
+footer {
+/*    background-color: black;*/
+/*    color: white;*/
+    display: flex;
+    flex-direction: column;
+    align-items:stretch;
+/*    gap: 2rem;*/
+}
+
 /*--------Banner-------*/
 .banner {
     background-color: #8B48BF;
@@ -253,7 +274,7 @@ h3 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 2.5rem 5rem;
+    padding: 5vh 15vw;
 }
 
 .banner h2{
@@ -266,19 +287,17 @@ h3 {
     background-color: white;
     color:#8B48BF;
 }
-/*---------------------------*/
-
-/*--------Footer-------*/
-
-footer {
+/*---------------------------------*/
+.footer-container {
     background-color: black;
     color: white;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    padding: 2.2rem 3rem;
+    align-items:center;
     gap: 2rem;
+    padding: 2rem;
 }
+
 /*--------Cuadro de texto con boton-------*/
 form .cuadro-texto {
     border-radius: 3rem;
@@ -318,3 +337,49 @@ ul.list-footer {
 }
 /*---------------------------*/
 
+
+/*///////////////////////////////////////////////////////////////////*/
+/*-----Media Queries---------*/
+/*///////////////////////////////////////////////////////////////////*/
+
+@media (min-width: 850px) {
+
+    body {
+
+    }
+
+    header {
+        max-width: 1200px;
+        display: flex;
+        justify-content: space-between;
+        align-self: center;
+    }
+     /*---Se Muestra menú ---*/
+    .nav-header {
+        display: flex;
+        
+    }
+
+    .lista-nav-header {
+        font-size: .8rem;
+        display: flex;
+        gap: 2vw;
+        list-style: none;
+    }
+
+    /*-------------------------*/
+
+    /*---Se botón (Get Started)---*/
+    header input.button-general { 
+        display: flex;
+        
+    }
+    /*-------------------------*/
+    /*--Se oculta Botón menú móvil--*/
+    .fa-solid {
+        display: none;
+    }
+    .fa-solid:hover {
+        display: none;
+    }
+}
