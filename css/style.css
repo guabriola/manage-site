@@ -287,9 +287,8 @@ ul.list-footer {
     columns: 2;
     margin: 0;
     padding: 0;
-    -webkit-columns: 2;
-    -moz-columns: 2;
-    -webkit-column-gap: 7rem;
+    -webkit-columns: 2; /*Se hace que se divina en dos*/
+    -webkit-column-gap: 7rem; /*Personalizo la distancia entre columnas*/
     
 }
 
