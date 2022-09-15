@@ -269,8 +269,13 @@ footer {
     color:#8B48BF;
 }
 /*---------------------------------*/
-.footer-container {
+
+footer {
     background-color: black;
+
+}
+
+.footer-container {
     color: white;
     display: flex;
     flex-direction: column;
@@ -280,6 +285,8 @@ footer {
 }
 
 /*--------Cuadro de texto con boton-------*/
+
+
 form .cuadro-texto {
     border-radius: 3rem;
     line-height: 2.3rem;
@@ -332,7 +339,7 @@ ul.list-footer {
     }
     /*-----Hader---------*/
     header {
-        width: 1200px;
+        max-width: 1200px;
         display: flex;
         justify-content: space-between;
         align-self: center;
@@ -371,6 +378,7 @@ ul.list-footer {
     /*/////////-------Seccion (Tarjetas)--------/////////*/
 
     /*Contenedor de todas las tarjetas*/
+
     .tarjetas {
         flex-direction: row;
         flex-wrap: wrap;
@@ -379,16 +387,20 @@ ul.list-footer {
         padding: 0;
         gap:4rem;
     }
+    
     /*Tarjeta de los porcentajes*/
     .tarjeta-porcentajes {
         order: 0;
-        width: 35vw
+        width: 35vw;
+        justify-content: initial;
     }
 
     /*Estilos tarjetas 1 y 3*/
+    
     .tarjeta {
         align-items: flex-start;
         width: 35vw;
+        align-self: flex-start;
     }
 
     /*---Titulos y Parrafos Tarjeta 1 y 3 ---*/
@@ -440,8 +452,81 @@ ul.list-footer {
         width: 30vw;
     }
 
+
     /*/////////-------Footer--------/////////*/
 
+    footer  {
+        flex-direction: row;
+    }
+
+    .footer-container {
+            max-width: 850px;
+            color: white;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+    /*--------Cuadro de texto con boton-------*/
+
+    form.formulario-footer {
+        order: -3;
+
+
+    }
+
+    /*--------Nav con Lista-------*/
+    nav.menu-footer {
+        order: -4;
+
+
+    }
+
+    /*--------Iconos Logo y copyright-------*/
+    div.iconos {
+        gap: 1rem;
+        order: -2;
+        /*padding-left: 1.2rem;*/
+        
+   
+    }
+
+    img.logo-footer {
+        order: -5;
+
+        
+    }
+
+    div.mensaje-copyright {
+        order: -1;
+
+        /*padding-right: 1.4rem;*/
+
+    }
+
+}
+
+
+@media (min-width: 1200px) {
+
+
+    .tarjetas {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content:space-around;
+        align-content: center;
+        align-items: center;
+        margin: auto;
+        gap:4rem;
+    }
+
+    /*/////////-------Footer--------/////////*/
+
+    footer  {
+        flex-direction: column;
+    }
 
     /*------BANNER---------*/
 
@@ -452,11 +537,15 @@ ul.list-footer {
     }
 
     .footer-container {
+        max-width: initial;
         display: flex;
         flex-direction: row;
         flex-wrap:wrap;
         justify-content:space-between;
-        column-gap: 10rem;
+        align-content: center;
+        align-items: flex-start;
+        flex-basis: 30%;
+        column-gap: 10vw;
         row-gap: 0;
         padding: 3vw 6vh;
     }
@@ -466,11 +555,14 @@ ul.list-footer {
     /*--------Cuadro de texto con boton-------*/
     form.formulario-footer {
         order: -3;
+
+
     }
 
     /*--------Nav con Lista-------*/
     nav.menu-footer {
         order: -4;
+
 
     }
 
@@ -478,13 +570,21 @@ ul.list-footer {
     div.iconos {
         gap: 1rem;
         order: -2;
+        /*padding-left: 1.2rem;*/
+        
+   
     }
 
     img.logo-footer {
         order: -5;
+
+        
     }
 
     div.mensaje-copyright {
         order: -1;
+
+        /*padding-right: 1.4rem;*/
+
     }
 }
