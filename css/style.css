@@ -19,13 +19,16 @@ body {
     min-width: 350px;
     gap: 4rem;
 }
+
+a {
+    text-decoration: none;
+}
 /*-------HEADER--------*/
 
 header {
     display: flex;
     padding: 2rem;
     justify-content: space-between; 
- 
 }
 
 
@@ -44,6 +47,12 @@ header button.button-general {
 }
 .fa-solid:hover {
     color: #7b8096;
+    transform: scale(120%);
+    transition: 1s;
+}
+
+.fa-solid:active {
+    transform: scale(100%);
 }
 /*-----------------------------------*/
 
@@ -66,6 +75,7 @@ li h4 {
 /*///-------Boton general--------///*/
 .button-general {
     background-color: #8B48BF;
+    box-shadow: -6px 3px 5px 0px rgba(0,0,0,0.75);
     border-radius: 3rem;
     border: 0;
     color: white;
@@ -74,6 +84,17 @@ li h4 {
     padding: 0 1.5rem;
     margin: 0%;
 }
+
+.button-general:hover {
+    transform: scale(110%);
+    transition: 1s;
+} 
+
+.button-general:active {
+    transform: scale(90%);
+    opacity:80%;
+    
+} 
 
 /*////////////////////////////////*/
 /*///---------MAIN---------///*/
@@ -171,6 +192,7 @@ h3 {
   
 .list-item::before {
     content: counter(list, decimal-leading-zero);/*se agrega el cero ants del numero*/
+    box-shadow: -6px 1px 5px 0px rgba(0,0,0,0.75);
     background-color: #8B48BF ;
     font-size: 1rem;
     width: 4.3rem;
@@ -225,6 +247,7 @@ div.contenedor-avatar#tarjetas-ocultar {
     color:#3F4868;
     padding: 1rem;
 }
+
 
 .contenedor-avatar p {
     color:#B9B9C1;
@@ -300,7 +323,10 @@ ul.list-footer {
     column-gap: 7rem; /*Personalizo la distancia entre columnas*/
     margin: 0;
     padding: 0;
+}
 
+ul.list-footer li a {
+    color: #FFFFFF;
 }
 
 /*--------Iconos Logo y copyright-------*/
@@ -335,21 +361,21 @@ ul.list-footer {
     /*-----Main---------*/
     .contenedor-main {
         align-self: center;
-        max-width: 1200px;
+        /*max-width: 1200px;*/
+        justify-content: space-around;
     }
     /*-----Hader---------*/
     header {
-        max-width: 1200px;
         display: flex;
-        justify-content: space-between;
-        align-self: center;
+        justify-content: space-around;
+        padding-top: 3rem;
+        padding-left: 0;
         gap: 2vw;
     }
 
      /*---Se Muestra menú ---*/
     .nav-header {
         display: flex;
-        
     }
 
     .lista-nav-header {
@@ -357,6 +383,24 @@ ul.list-footer {
         display: flex;
         gap: 2vw;
         list-style: none;
+    }
+
+    .lista-nav-header li a {
+        color: #242E52;
+    }
+
+    .lista-nav-header li a:hover {
+        color: rgba(36, 46, 82, 0.6) ; 
+        
+    }
+
+    .lista-nav-header li:hover {
+        transform: scale(130%);
+        transition: 1s;
+    }
+
+    .lista-nav-header li:active {
+        transform: scale(100%);
     }
 
 
@@ -577,15 +621,11 @@ ul.list-footer {
     }
 
     img.logo-footer {
-        order: -5;
-
-        
+        order: -5;   
     }
 
     div.mensaje-copyright {
         order: -1;
-
-        /*padding-right: 1.4rem;*/
 
     }
 }
