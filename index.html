@@ -29,7 +29,7 @@
         <i class="fa-solid fa-bars"></i>
     </header>
 
-    <main class="contenedor">
+    <main class="contenedor-main">
 
         <section class="tarjetas">
             <div class="tarjeta">
@@ -46,62 +46,60 @@
                 <h3>What´s different about Manage?</h3>
                 <p class="parrafo-destacado">Manage provides all the functionality your teas needs, without the complexity. Our software is tailor-made for modern digital product teams</p>
             </div>
+
+            <div class="tarjeta-lista-ord">
+                <ol role="list" class="lista-tarjeta-4">
+                    <li class="list-item">
+                        <div class="fondo-titulo">
+                        <h4>Track company-wide progress</h4>
+                        </div>
+                        <p class="parrafo-lista">See how your day-to-day tasks fit into the wider vision. Go from tracking progress at the milestone level all the way done to the smallest of details. Never lose sight of the bigger picture again.</p>
+                    </li>
+    
+                    <li class="list-item">
+                        <div class="fondo-titulo">
+                        <h4>Advance built-in reports</h4>
+                        </div>
+                        <p class="parrafo-lista">Set internal delivery estimates and track progress toward company goals. Our customisable dashboard helps you build out the reports you need to keep key stakeholders informed.</p>
+                    </li>
+                    <li class="list-item">
+                        <div class="fondo-titulo">
+                        <h4>Everything you need in one place</h4>
+                        </div>
+                        <p class="parrafo-lista">Stop jumping from one service to another to communicate, store files, track tasks and share documents. Manage offers an all-in-one team productivity solution.</p>
+                    </li>
+                </ol>
+            </div>
         </section>
 
-        <section class="tarjeta-lista-ord">
-            <ol role="list" class="lista-tarjeta-4">
-                <li class="list-item">
-                    <div class="fondo-titulo">
-                    <h4>Track company-wide progress</h4>
-                    </div>
-                    <p class="parrafo-lista">See how your day-to-day tasks fit into the wider vision. Go from tracking progress at the milestone level all the way done to the smallest of details. Never lose sight of the bigger picture again.</p>
-                </li>
+        <section class="avatar-cards">
 
-                <li class="list-item">
-                    <div class="fondo-titulo">
-                    <h4>Advance built-in reports</h4>
-                    </div>
-                    <p class="parrafo-lista">Set internal delivery estimates and track progress toward company goals. Our customisable dashboard helps you build out the reports you need to keep key stakeholders informed.</p>
-                </li>
-                <li class="list-item">
-                    <div class="fondo-titulo">
-                    <h4>Everything you need in one place</h4>
-                    </div>
-                    <p class="parrafo-lista">Stop jumping from one service to another to communicate, store files, track tasks and share documents. Manage offers an all-in-one team productivity solution.</p>
-                </li>
-            </ol>
-        </section>
-
-        <section class="they-said">
             <h3>What they´ve said</h3>
 
-            <div class="avatar-card">
+            <div class="contenedor-de-avatares">
+
                 <div class="contenedor-avatar">
                     <img src="imagenes/avatar-ali.png" alt="imagen-of-ali-bravo">
                     <h4>Ali Bravo</h4>
                     <p>“Manage has supercharged our team´s workflow. The ability to maintain visibility on larger milestones at all times keeps everyone motivated.”</p>
                 </div>
-            </div>
 
-            <div class="tarjetas-ocultar">
-                <div class="avatar-card">
-                    <div class="contenedor-avatar">
-                        <img src="imagenes/avatar-anisha.png" alt="imagen-of-anisha">
-                        <h4>Anisha Sanders</h4>
-                        <p>“We have been able to cancel so many other subscriptions since using manage. There ir no more cross-channel confusion and everyone is much more focused.”</p>
-                    </div>
+                <div class="contenedor-avatar" id="tarjetas-ocultar">
+                    <img src="imagenes/avatar-anisha.png" alt="imagen-of-anisha">
+                    <h4>Anisha Sanders</h4>
+                    <p>“We have been able to cancel so many other subscriptions since using manage. There ir no more cross-channel confusion and everyone is much more focused.”</p>
                 </div>
 
-                <div class="avatar-card">
-                    <div class="contenedor-avatar">
-                        <img src="imagenes/avatar-richard.png" alt="imagen-of-richard">
-                        <h4>Richard Anderson</h4>
-                        <p>“We have been able to cancel so many other subscriptions since using manage. There ir no more cross-channel confusion and everyone is much more focused.”</p>
-                    </div>
+                <div class="contenedor-avatar" id="tarjetas-ocultar">
+                    <img src="imagenes/avatar-richard.png" alt="imagen-of-richard">
+                    <h4>Richard Anderson</h4>
+                    <p>“We have been able to cancel so many other subscriptions since using manage. There ir no more cross-channel confusion and everyone is much more focused.”</p>
                 </div>
+
             </div>
 
             <input class="button-general" type="submit" name="getstarted" value="Get Started">
+
         </section>
     </main>
 
@@ -113,36 +111,38 @@
         </section>
 
         <div class="footer-container">
-        <form>
-            <input class="cuadro-texto" type="text" name="inbox" placeholder="Update in your inbox...">
-            <input class="button-general" type="button" name="button-inbox" id="button-inbox" value="Go">
-        </form>
 
-        <nav>
-            <ul class="list-footer">
-                <li>Home</li>
-                <li>Pricing</li>
-                <li>Products</li>
-                <li>About Us</li>
-                <li>Careers</li>
-                <li>Community</li>
-                <li>Privacy Policy</li>
-            </ul>
-        </nav>
+            <form class="formulario-footer">
+                <input class="cuadro-texto" type="text" name="inbox" placeholder="Update in your inbox...">
+                <input class="button-general" type="button" name="button-inbox" id="button-inbox" value="Go">
+            </form>
 
-        <div class="iconos">
-            <a href="https://www.facebook.com"> <img class="icono" src="imagenes/icon-facebook.svg" alt="facebook"></a>
-            <a href="https://www.youtube.com"> <img class="icono" src="imagenes/icon-youtube.svg" alt="youtube"></a>
-            <a href="https://www.twitter.com"> <img class="icono" src="imagenes/icon-twitter.svg" alt="twitter"></a>
-            <a href="https://www.pinterest.com"> <img class="icono" src="imagenes/icon-pinterest.svg" alt="pinterest"></a>
-            <a href="https://www.instagram.com"> <img class="icono" src="imagenes/icon-instagram.svg" alt="instagram"></a>
-        </div>
+            <nav class="menu-footer">
+                <ul class="list-footer">
+                    <li>Home</li>
+                    <li>Pricing</li>
+                    <li>Products</li>
+                    <li>About Us</li>
+                    <li>Careers</li>
+                    <li>Community</li>
+                    <li>Privacy Policy</li>
+                </ul>
+            </nav>
 
-        <img src="imagenes/logo-footer.svg" alt="Logo de la empresa">
+            <div class="iconos">
+                <a href="https://www.facebook.com"> <img class="icono" src="imagenes/icon-facebook.svg" alt="facebook"></a>
+                <a href="https://www.youtube.com"> <img class="icono" src="imagenes/icon-youtube.svg" alt="youtube"></a>
+                <a href="https://www.twitter.com"> <img class="icono" src="imagenes/icon-twitter.svg" alt="twitter"></a>
+                <a href="https://www.pinterest.com"> <img class="icono" src="imagenes/icon-pinterest.svg" alt="pinterest"></a>
+                <a href="https://www.instagram.com"> <img class="icono" src="imagenes/icon-instagram.svg" alt="instagram"></a>
+            </div>
 
-        <div>
-            <p class="copyright">Copyright 2020. All Rights Reserved</p>
-        </div>
+            <img class="logo-footer" src="imagenes/logo-footer.svg" alt="Logo de la empresa">
+
+            <div class="mensaje-copyright">
+                <p class="copyright">Copyright 2020. All Rights Reserved</p>
+            </div>
+
         </div>
     </footer>
 

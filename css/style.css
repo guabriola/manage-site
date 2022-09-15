@@ -4,8 +4,7 @@
 }
 */
 *{
-    box-sizing: border-box;   
-
+    box-sizing: border-box;
 }
 /*///////////////////////////////////////////////////////////////////*/
 /*-----Configuracion inicial para movil---------*/
@@ -18,15 +17,15 @@ body {
     flex-direction: column;
     margin: 0;
     min-width: 350px;
-    gap: 4vh;
+    gap: 4rem;
 }
 /*-------HEADER--------*/
 
 header {
     display: flex;
     padding: 2rem;
-    justify-content: space-between;
-    max-width: 850px;   
+    justify-content: space-between; 
+ 
 }
 
 
@@ -79,17 +78,15 @@ li h4 {
 /*////////////////////////////////*/
 /*///---------MAIN---------///*/
 /*///////////////////////////////*/
+
 /*-------Main--------*/
 .contenedor-main {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-self: center;
-    max-width: 850px;
     margin: 0%;
-    gap: 4rem;
+    gap:4rem;
 }
-
 
 .tarjetas {
     display: flex;
@@ -102,9 +99,9 @@ li h4 {
 
 /*---Gral Tarjeta 1 y 3---*/
 .tarjeta {
-    align-items: center;
     display: flex;
     flex-direction: column;
+    align-items: center;
     margin: 0;
     row-gap: 2rem; 
 }
@@ -140,7 +137,6 @@ h3 {
     display: flex;
     justify-content: center;
     order: -1;
-
 }
 .porcentajes {
     max-width: 25rem;
@@ -174,15 +170,8 @@ h3 {
 }
   
 .list-item::before {
-    content: counter(list, decimal-leading-zero);/**/
-    
-    /* Add a background image for the marker */
+    content: counter(list, decimal-leading-zero);/*se agrega el cero ants del numero*/
     background-color: #8B48BF ;
-    
-    /* Add animation */
-    /*animation: 3s linear 1s infinite spin;*/
-
-    /* Create the box and center its contents */
     font-size: 1rem;
     width: 4.3rem;
     height: 2.6rem;
@@ -190,7 +179,6 @@ h3 {
     justify-content: center;
     align-items: center;
     border-radius: 50rem;
-    /* Additional text styles */
     color: white;;
     margin-right: -1rem;
 
@@ -198,6 +186,7 @@ h3 {
 
   .parrafo-lista {
     padding: 1vh 5vw;
+    color:#B3B2B7;
   }
 
 /*----------------------------------*/
@@ -205,7 +194,7 @@ h3 {
 
 /*---Avatares------*/
 
-.they-said {
+.avatar-cards {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -215,16 +204,10 @@ h3 {
 
 }
 
-.tarjetas-ocultar {
+div.contenedor-avatar#tarjetas-ocultar {
     flex-direction: column;
     display: none;/*al agrandar la página se cambia por "display: flex;"*/
     gap: 4rem;
-}
-
-.avatar-card{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
 .contenedor-avatar > * {
@@ -255,16 +238,14 @@ h3 {
 }
 /*------------------------------------*/
 
-
-/*--------Footer-------*/
+/*-------------------------------*/
+/*////--------Footer-------//////*/
+/*-------------------------------*/
 
 footer {
-/*    background-color: black;*/
-/*    color: white;*/
     display: flex;
     flex-direction: column;
     align-items:stretch;
-/*    gap: 2rem;*/
 }
 
 /*--------Banner-------*/
@@ -344,16 +325,20 @@ ul.list-footer {
 
 @media (min-width: 850px) {
 
-    body {
-
-    }
-
-    header {
+    /*-----Main---------*/
+    .contenedor-main {
+        align-self: center;
         max-width: 1200px;
+    }
+    /*-----Hader---------*/
+    header {
+        width: 1200px;
         display: flex;
         justify-content: space-between;
         align-self: center;
+        gap: 2vw;
     }
+
      /*---Se Muestra menú ---*/
     .nav-header {
         display: flex;
@@ -367,19 +352,139 @@ ul.list-footer {
         list-style: none;
     }
 
-    /*-------------------------*/
 
-    /*---Se botón (Get Started)---*/
+    /*---Se muestra botón (Get Started)---*/
     header input.button-general { 
         display: flex;
-        
     }
-    /*-------------------------*/
+
+
     /*--Se oculta Botón menú móvil--*/
     .fa-solid {
         display: none;
     }
     .fa-solid:hover {
         display: none;
+    }
+
+
+    /*/////////-------Seccion (Tarjetas)--------/////////*/
+
+    /*Contenedor de todas las tarjetas*/
+    .tarjetas {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content:space-around;
+        align-content: center;
+        padding: 0;
+        gap:4rem;
+    }
+    /*Tarjeta de los porcentajes*/
+    .tarjeta-porcentajes {
+        order: 0;
+        width: 35vw
+    }
+
+    /*Estilos tarjetas 1 y 3*/
+    .tarjeta {
+        align-items: flex-start;
+        width: 35vw;
+    }
+
+    /*---Titulos y Parrafos Tarjeta 1 y 3 ---*/
+    div.tarjeta h2, h3, .parrafo-destacado {
+        text-align:left;
+    }
+
+    /*Tarjeta de la lista ordenada*/
+    .tarjeta-lista-ord {
+        width: 35vw;
+    }
+
+    .lista-tarjeta-4 {
+        margin: 0;
+        padding: 0;
+    }
+
+    .fondo-titulo {
+        background-color: inherit;
+    }
+
+    .parrafo-lista {
+        padding: 2rem;
+        margin: 0;
+    }
+
+    /*/////////-------Seccion (Avatares)--------/////////*/
+
+    .avatar-cards {
+        padding: 0;
+        gap: 4vw;
+        
+    }
+
+    div.contenedor-avatar#tarjetas-ocultar {
+        display: initial;/*Se vuelven a mostrar las dos cards"*/
+    }
+
+    .contenedor-de-avatares {
+        display: flex;
+        max-width: 1200px;
+    }
+
+    .avatar-cards h3 {
+        text-align: center;
+    }
+
+    .contenedor-avatar {
+        width: 30vw;
+    }
+
+    /*/////////-------Footer--------/////////*/
+
+
+    /*------BANNER---------*/
+
+    .banner  {
+        flex-direction: row;
+        justify-content:space-between;
+        padding: 2vh 5vw;
+    }
+
+    .footer-container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap:wrap;
+        justify-content:space-between;
+        column-gap: 10rem;
+        row-gap: 0;
+        padding: 3vw 6vh;
+    }
+
+
+
+    /*--------Cuadro de texto con boton-------*/
+    form.formulario-footer {
+        order: -3;
+    }
+
+    /*--------Nav con Lista-------*/
+    nav.menu-footer {
+        order: -4;
+
+    }
+
+    /*--------Iconos Logo y copyright-------*/
+    div.iconos {
+        gap: 1rem;
+        order: -2;
+    }
+
+    img.logo-footer {
+        order: -5;
+    }
+
+    div.mensaje-copyright {
+        order: -1;
     }
 }
