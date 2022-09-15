@@ -32,7 +32,7 @@ header {
 .nav-header { /*---Se Oculta menú y botón (Get Started) en Movil---*/
     display: none;
 }
-header input.button-general {
+header button.button-general {
     display: none;
 }
 
@@ -264,7 +264,7 @@ footer {
     text-align: center;
 }
 
-.banner input.button-general {
+.banner button.button-general {
     background-color: white;
     color:#8B48BF;
 }
@@ -361,9 +361,10 @@ ul.list-footer {
 
 
     /*---Se muestra botón (Get Started)---*/
-    header input.button-general { 
+    header button.button-general { 
         display: flex;
-    }
+        align-items: center;
+        }
 
 
     /*--Se oculta Botón menú móvil--*/
@@ -396,7 +397,7 @@ ul.list-footer {
     }
 
     /*Estilos tarjetas 1 y 3*/
-    
+
     .tarjeta {
         align-items: flex-start;
         width: 35vw;
