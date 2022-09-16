@@ -88,6 +88,7 @@ li h4 {
 .button-general:hover {
     transform: scale(110%);
     transition: 1s;
+    cursor: pointer;
 } 
 
 .button-general:active {
@@ -327,6 +328,12 @@ ul.list-footer {
 
 ul.list-footer li a {
     color: #FFFFFF;
+}
+
+ul.list-footer li:hover {
+    transform: translateX(10%);
+    transition: .5s;
+    cursor: pointer;
 }
 
 /*--------Iconos Logo y copyright-------*/
@@ -580,6 +587,47 @@ ul.list-footer li a {
         justify-content:space-between;
         padding: 2vh 5vw;
     }
+    
+    section.banner .button-general {
+        /*animation*/
+        animation-name: golpe;
+        animation-duration: 2s;
+        animation-delay: 4s;
+        animation-iteration-count:infinite;
+        animation-direction:alternate;
+        animation-timing-function: ease-out;
+
+    }
+
+    .banner h2 {
+        /*animation*/
+        animation-name: mover;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        animation-direction:alternate;
+        animation-timing-function: ease-out;
+    }
+
+    
+    @keyframes mover {
+        0% {
+            transform: translateX(70%);
+        }
+
+        100% {
+            transform: translateX(0%);
+        }
+    }   
+    
+    @keyframes golpe {
+        0% {
+            transform: translateX(0%);
+        }
+
+        100% {
+            transform: translateX(40%);
+        }
+    } 
 
     .footer-container {
         max-width: initial;
@@ -628,4 +676,5 @@ ul.list-footer li a {
         order: -1;
 
     }
+
 }
