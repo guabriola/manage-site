@@ -1,8 +1,3 @@
-/*@font-face {
-    font-family: Be Vietnam;
-    src:url('/fuentes/BeVietnam-Regular.woff') format('woff');
-}
-*/
 *{
     box-sizing: border-box;
 }
@@ -169,14 +164,13 @@ h3 {
 /*---------Lsitas con estilos cambio viñeta-----------*/
 
 .lista-tarjeta-4 {
-    /* Se quita estilos de default */
     display: flex;
     flex-direction: column;
-    list-style: none;/*Acá saca los nùmeros originales de la lista*/ 
+    list-style: none;/* Se quita estilos de default */
     counter-reset: list;/* Crea el contador que se saca en la linea anterior */
   }
 
-  .fondo-titulo {
+.fondo-titulo {
     display: flex;
     align-items: center;
     background-color: rgba(139, 72, 191, 0.3);
@@ -188,12 +182,13 @@ h3 {
 .list-item {
     display: flex;
     flex-wrap: wrap;
-    counter-increment: list; /* Increment counter */
+    counter-increment: list; /* Para re-iniciar el counter */
     align-items: baseline;
 }
   
 .list-item::before {
-    content: counter(list, decimal-leading-zero);/*se agrega el cero ants del numero*/
+    /*Se crea el pseudo elemento que hace de viñeta*/
+    content: counter(list, decimal-leading-zero);/*Se usa el contador antes cargado y se agrega el cero antes del numero*/
     box-shadow: -6px 1px 5px 0px rgba(0,0,0,0.75);
     background-color: #8B48BF ;
     font-size: 1rem;
@@ -380,7 +375,7 @@ div.iconos a img.icono:active {
 /*-----Media Queries---------*/
 /*///////////////////////////////////////////////////////////////////*/
 
-@media (min-width: 850px) {
+@media (min-width: 850px) { /*Hago un intermedio para que la transición no sea tan brusca*/
 
     /*-----Main---------*/
     .contenedor-main {
@@ -609,7 +604,7 @@ div.iconos a img.icono:active {
         align-content: center;
         margin-top: .8rem;
     }
-
+    /*Animacion para el titulo del banner*/
     .banner h2 {
         /*animation*/
         animation-name: mover;
@@ -622,7 +617,7 @@ div.iconos a img.icono:active {
     
     @keyframes mover {
         0% {
-            transform: translateX(34vw);
+            transform: translateX(33vw);
         }
 
         100% {
@@ -630,7 +625,7 @@ div.iconos a img.icono:active {
         }
     }   
     
-
+    /*Ordeno el footer container para el 1440px*/
     .footer-container {
         max-width: initial;
         display: flex;
