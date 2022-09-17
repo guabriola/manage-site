@@ -156,6 +156,7 @@ h3 {
     justify-content: center;
     order: -1;
 }
+
 .porcentajes {
     max-width: 25rem;
 }
@@ -329,13 +330,32 @@ ul.list-footer li a {
     color: #FFFFFF;
 }
 
-ul.list-footer li:hover {
+.list-footer li {
+    font-size: 1rem;
+    width: 400;
+    line-height: 2.5rem;
+}
+
+.list-footer li:hover {
     transform: translateX(10%);
     transition: .5s;
     cursor: pointer;
 }
 
+
+
 /*--------Iconos Logo y copyright-------*/
+
+div.iconosYlogo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem
+}
+
+img.logo-footer {
+    width: 9rem;
+}
 
 .iconos {
     display: flex;
@@ -356,17 +376,10 @@ div.iconos a img.icono:active {
     
 } 
 
-.list-footer li {
-    font-size: 1rem;
-    width: 400;
-    line-height: 2.5rem;
-}
-
 .copyright {
     color:#8C8C94;
     font-size: .8rem;
     font-weight: 500;
-    
 }
 /*---------------------------*/
 
@@ -533,45 +546,7 @@ div.iconos a img.icono:active {
             gap: 2rem;
         }
 
-    /*--------Cuadro de texto con boton-------*/
-
-    form.formulario-footer {
-        order: -3;
-
-
-    }
-
-    /*--------Nav con Lista-------*/
-    nav.menu-footer {
-        order: -4;
-
-
-    }
-
-    /*--------Iconos Logo y copyright-------*/
-    div.iconos {
-        gap: 1rem;
-        order: -2;
-        /*padding-left: 1.2rem;*/
-        
-   
-    }
-
-    img.logo-footer {
-        order: -5;
-
-        
-    }
-
-    div.mensaje-copyright {
-        order: -1;
-
-        /*padding-right: 1.4rem;*/
-
-    }
-
 }
-
 
 @media (min-width: 1440px) {
 
@@ -626,52 +601,46 @@ div.iconos a img.icono:active {
     }   
     
     /*Ordeno el footer container para el 1440px*/
+
     .footer-container {
         max-width: initial;
         display: flex;
         flex-direction: row;
-        flex-wrap:wrap;
-        justify-content:space-between;
-        align-content: center;
-        align-items: flex-start;
-        flex-basis: 30%;
+        justify-content: space-between;
+        align-items: initial;
         column-gap: 9vw;
-        row-gap: 0;
         padding: 2vw 6vh;
+        gap: initial;
     }
 
+    /*--------Cambio orden de los elementos -------*/
 
+    div.iconosYlogo {
+        order: 1;
+        flex-direction: column-reverse;
+        justify-content:space-around;
+        gap: initial;
+    }
 
     /*--------Cuadro de texto con boton-------*/
     form.formulario-footer {
-        order: -3;
-
-
+        order: 3;
     }
 
     /*--------Nav con Lista-------*/
     nav.menu-footer {
-        order: -4;
-
-
+        order: 2;
+        align-items: flex-end;
     }
 
-    /*--------Iconos Logo y copyright-------*/
-    div.iconos {
-        gap: 1rem;
-        order: -2;
-        /*padding-left: 1.2rem;*/
-        
-   
-    }
-
-    img.logo-footer {
-        order: -5;   
-    }
-
+    /*--------copyright-------*/
     div.mensaje-copyright {
-        order: -1;
-
+        order: 4;
+        padding-left: 83%;
     }
 
+    div.iconos {
+        gap:2rem;
+        
+    }
 }
